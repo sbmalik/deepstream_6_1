@@ -1,0 +1,10 @@
+**.vscode**
+**models/
+**data/
+**videos/
+**tests/
+**notebooks/
+**.h264**
+**.env
+**__pycache__**
+dst_six/services/deepstream/exp/dst_python_apps/apps/common/__pycache__/*.pyc
