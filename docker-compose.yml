@@ -1,0 +1,38 @@
+version: "2.3"
+
+services:
+  deepstream_prac_61:
+    image: "deepstream_prac_61"
+    container_name: "deepsream_prac_61"
+    build:
+      context: ./services
+      dockerfile: deepstream/Dockerfile
+      args:
+        - CLASSES=$CLASSES
+    environment:
+      - GST_DEBUG=$GST_DEBUG
+      - DISPLAY=$DISPLAY
+    runtime: nvidia
+    ipc: host
+    shm_size: 1g
+    ulimits:
+      memlock:
+        soft: -1
+        hard: -1
+      stack:
+        soft: 67108864
+        hard: 67108864
+    # logging: *greylog
+    volumes:
+      # - tmpfs:/tmpfs
+      - /tmp/.X11-unix:/tmp/.X11-unix
+      - $LOCAL_DEVEL_DIR:$DOCKER_DEVEL_DIR
+
+
+
+
+volumes:
+  tmpfs:
+    driver_opts:
+      type: tmpfs
+      device: tmpfs
