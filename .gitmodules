@@ -1,0 +1,3 @@
+[submodule "services/deepstream/exp/dst_python_apps/apps/face-recognition-deepstream"]
+	path = services/deepstream/exp/dst_python_apps/apps/face-recognition-deepstream
+	url = https://github.com/sbmalik/face-recognition-deepstream
