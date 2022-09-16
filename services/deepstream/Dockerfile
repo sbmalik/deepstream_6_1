@@ -24,4 +24,6 @@ ARG DISPLAY
 
 ENV DISPLAY=${DISPLAY}
 
+RUN pip3 install scikit-learn scikit-image opencv-python h5py pandas matplotlib
+
 WORKDIR /opt/nvidia/deepstream/deepstream-6.1/sources/dst_python_apps
